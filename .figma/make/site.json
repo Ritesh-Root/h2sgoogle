@@ -1,0 +1,10 @@
+{
+  "description": "Generate stunning front-end designs based on user-provided context and reference images, streamlining the design process for developers and designers.",
+  "robots": {
+    "index": false
+  },
+  "accessibility": {
+    "addBypassLinks": false,
+    "ignoreReducedMotion": false
+  }
+}

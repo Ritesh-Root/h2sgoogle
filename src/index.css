@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap');
+@import 'leaflet/dist/leaflet.css';
+@import 'tailwindcss';
+
+@theme {
+  --font-display: 'Outfit', sans-serif;
+  --font-sans: 'Inter', sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+
+  --color-canvas: #e9e7f7;
+  --color-ink: #241f3d;
+  --color-ink-soft: #6a6488;
+  --color-surface: #ffffff;
+
+  --color-grape-50: #f3f1fb;
+  --color-grape-100: #e7e3f6;
+  --color-grape-200: #d3ccec;
+  --color-grape-300: #b3a8dd;
+  --color-grape-400: #9a8ae0;
+  --color-grape-500: #7c6bd6;
+  --color-grape-700: #4a3a86;
+  --color-grape-900: #2b2350;
+
+  --color-lime: #cdf564;
+  --color-lime-deep: #b6e63f;
+
+  --color-danger: #e5484d;
+  --color-warn: #f0a020;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-sans);
+  background: var(--color-canvas);
+  color: var(--color-ink);
+  -webkit-font-smoothing: antialiased;
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: transparent transparent;
+}
+*::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+*::-webkit-scrollbar-thumb {
+  background: transparent;
+  border-radius: 999px;
+}
+*:hover::-webkit-scrollbar-thumb {
+  background: color-mix(in srgb, var(--color-grape-300) 70%, transparent);
+}
+
+/* Leaflet tooltips restyled to match the dark corridor panel */
+.leaflet-tooltip {
+  background: rgba(20, 16, 40, 0.9);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  color: #efeaff;
+  font-family: var(--font-sans);
+  font-size: 11px;
+  border-radius: 8px;
+  padding: 3px 8px;
+  box-shadow: none;
+}
+.leaflet-tooltip::before {
+  display: none;
+}
+.leaflet-tooltip.ac-tip {
+  background: transparent;
+  border: none;
+  color: #cdf564;
+  font-weight: 600;
+}
+.leaflet-container {
+  font-family: var(--font-sans);
+}
